@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt 
 import re 
+st.set_page_config(page_title="Recipe App", layout="wide") 
 
 st.title('America’s Test Kitchen Recipes: Brownies, Bars, and More')
 
@@ -96,11 +97,10 @@ with left_col:
             value = (0.0, 165.0),
             step= 0.1)
 
-        with right_col:
-            cool_time_range = st.slider(
-                "Select a range of cool time in min",
-                value = (0.0, 315.0),
-                step= 0.1)
+        cool_time_range = st.slider(
+            "Select a range of cool time in min",
+            value = (0.0, 315.0),
+            step= 0.1)
 
     filtered_data = filtered_data[
         (filtered_data["Review Rating"] >= rating_range[0]) & (filtered_data["Review Rating"] <= rating_range[1]) &
