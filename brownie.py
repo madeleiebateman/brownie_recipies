@@ -31,7 +31,7 @@ with col5:
     all_reci = st.checkbox ('All', value= True)
 
 
-#----------mine
+#----------
 
 if all_reci:
     filtered_data = data  
